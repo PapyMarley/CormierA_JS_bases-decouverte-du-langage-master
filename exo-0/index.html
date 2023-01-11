@@ -11,50 +11,50 @@
 
         /* Section 1 */   
 
-        var name = "Joe";
-        var city = 'London';
-        var age = 32;
-        var isRed = true;
-        var isOld = age > 80;
+        var name = "Joe"; //initialise la variable "Name"(nom) à la valeur "Joe"(string)
+        var city = 'London'; // initialise la variable "city"(ville) ) la valeur 'London'(string)
+        var age = 32; // initialise la variable "age" à la valeur "32"(int)
+        var isRed = true; // initialise la variable "isRed" à la valeur "true" (boolean)
+        var isOld = age > 80; // initialise la variable "isOld" à la valeur "true" uniquement quand "age" est supérieur à 80
 
-        var previousJobs = ['lawyer', 'developper', 'Professionnal climber'];
+        var previousJobs = ['lawyer', 'developper', 'Professionnal climber']; // initialise un tableau "previousJob"(travails précédents) avec 3 données
 
-        function info(height, weight) {
-            if (height > 180) {
-                console.log('Vous êtes grand');
+        function info(height, weight) { // Ouvre une fonctione "info" prenant en compte les valeurs "height"(taille) et "weight"(poid)
+            if (height > 180) { // Si "height" est supérieur à 180(int)
+                console.log('Vous êtes grand'); // Renvoie le message 'Vous êtes grand'(string)
             }
-            if (weight < 0) {
-                console.log('oups, there is a problem');
-            } else if ( weight < 15) {
-                console.log('Are you that slim ?')
-            } else {
-                console.log('Good !')
+            if (weight < 0) { // Si "weight"(poid) est inférieur à 0(int)
+                console.log('oups, there is a problem'); // Renvoie le message 'oups, there is a problem'
+            } else if ( weight < 15) { // Sinon si, "weight" inférieur à 15(int)
+                console.log('Are you that slim ?') // Renvoie 'Are you that slim?'
+            } else { // Sinon (tout autre cas)
+                console.log('Good !') //renvoie "Good !"
             }
         }
 
-        info(165, 45);
+        info(165, 45); // Initialise la fonction "info" avec un "height" à "165" et un 'weight' à '45'
 
-        var myHeight = 175;
-        var myWeight = 86;
+        var myHeight = 175; // initialise la variable "myHeight"(ma taille) à 175
+        var myWeight = 86; // initialise la variable "myWeight"(mon poid) à 86
 
-        info(myHeight, myWeight);
+        info(myHeight, myWeight); // Donne à la fonction "info" les paramêtres "myHeight" et "myWeight"
 
-        info(myHeight + 15, myWeight - 100);
+        info(myHeight + 15, myWeight - 100); // Donne à la fonction info les paramêtres "myHeight + 15" et "myWeight -100" (la fonction gère automatiquement le calcul)
 
-        function toUpper(variable) {
-            return variable.toUpperCase();
+        function toUpper(variable) { // Ouvre une fonction "toUpper" avec le paramêtre "variable"
+            return variable.toUpperCase(); // Renvoie le résultat de la valeur "variable" utilisée dans "toUpperCase()".
         }
 
-        var upperName = toUpper(name);
+        var upperName = toUpper(name); // initialise la variable "upperName" à la valeur "name" renvoyer par "toUpper"
 
-        for (i = 0; i < 3; i = i + 1) {
-            console.log(previousJobs[i]);
+        for (i = 0; i < 3; i = i + 1) { // interroge le tableau "previousJob" sur un emplacement précis du tableau
+            console.log(previousJobs[i]); // Renvoie la valeur de cet emplacement
         }
 
         /* Section 2: */
 
-        // afficher la ville dans laquele Joe vit.     
-
+        // afficher la ville dans laquelle Joe vit.     
+        
         // afficher si Joe est roux ou pas.
 
         /* Section 3 */
