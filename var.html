@@ -7,29 +7,47 @@
  
        <h1>Exercice Variables</h1>
  
-       <script type="text/javascript">
- 
+       <script type="text/javascript">    
+            /* VARIABLES */
+
            // Exercice 1
-            let num = 255;
-            let txt = "255";
-            let bin = true;
-            let flt = 7.23;
+            //let num = 255;
+            //let txt = "255";
+            //let bin = true;
+            //let flt = 7.23;
            // Exercice 2
-            num ++ ;
-            console.log(txt + "est ici une chaine de caractères");
-            console.log(!bin);
-            console.log(flt + num);
+            //num ++ ;
+            //console.log(txt + "est ici une chaine de caractères");
+            //console.log(!bin);
+            //console.log(flt + num);
            // Exercice 3
-            num = 23;
-            txt = "33";
-            console.log(txt+num);
-            console.log(num + txt);
+            //num = 23;
+            //txt = "33";
+            //console.log(txt+num);
+            //console.log(num + txt);
            // Exercice 4
-            num = 23;
-            txt = "33";
-            tmp = 0;
-            tmp = parseint(txt);
-            console.log(num+tmp);
+            //num = 23;
+            //txt = "33";
+            //tmp = 0;
+            //tmp = parseint(txt);
+            //console.log(num+tmp);
+            
+            /* CONDITIONS */
+
+            let varOne = parseInt(prompt("Choississez un chiffre entre 1 et 3: "));
+            let varTwo = parseInt(prompt("Choississez un chiffre entre 1 et 3: "));
+            let varThree = parseInt(prompt("Choississez un chiffre entre 1 et 3: "));
+
+            if ((varOne === varTwo) && (varTwo === varThree)){
+                console.log("Les trois valeurs sont identiques");
+            }
+            else if(varOne === varTwo || varThree){
+                console.log("Seulement deux valeurs sont identiques");
+            }
+            else{
+                console.log("Aucune des valeurs ne sont identiques");
+            }
+                
        </script>
    </body>
 </html>
