@@ -21,6 +21,7 @@ console.log(secretMessage);
 secretMessage.unshift('Programming');//Step_5
 console.log(secretMessage);
 
+/*
 secretMessage.reverse();
 for (i = 0; i <= 9; i++){
     secretMessage.pop();
@@ -28,3 +29,9 @@ for (i = 0; i <= 9; i++){
 secretMessage.push("know","you","what","about","isn't","Proggraming");
 secretMessage.reverse();
 console.log(secretMessage);
+*/
+
+secretMessage.splice(5,5,"know");//step 6
+console.log(secretMessage);
+
+console.log(secretMessage.join(" ")); //step 7

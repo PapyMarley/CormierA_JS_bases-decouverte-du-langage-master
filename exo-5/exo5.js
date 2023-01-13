@@ -19,5 +19,6 @@ for (let i = upperInput.length - 1; i >= 0; i -= 1) {
     }    
 }
 
-console.log(resultArray);
+upperInput.indexOf("");
 
+console.log(resultArray);
