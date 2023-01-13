@@ -1,36 +1,67 @@
 // you can write js here
 console.log('exo-3');
 
-const playerInput = prompt("Your choice ( rock, paper, scissors) ?");
-let playerChoice = playerInput;
+const playerInput= prompt("your choice (rock, paper, scissors) ?");
+const playerChoice = playerInput.toLowerCase()
+const computerChoice = getComputerChoice();
 
-/* Player's block */
-function getPlayerChoice(playerInput) {
-    //vérifie que le joueur choississent l'une des 3 propositions
-    console.log(playerInput.toLowerCase());
-}
+function getPlayerChoice(playerChoice){
 
-/* Computer's block */
-function getComputerChoice(){
-    //génére un choix aléatoire pour le PC
-    computerChoice = Math.floor(Math.random() * 3);
-    console.log(computerChoice);
-    return computerChoice;
-}
-
-
-/* Result's block */
-function findWinner(playerChoice, ComputerChoice){
-    if (playerChoice === scissors){
-    } else if (playerChoice == ComputerChoice) { // Si le joueur et le PC font le même choix
-        console.log("It's a tie!"); 
-    } else if (playerChoice == rock) { // Si le joueur choisi "rock"
-        if (ComputerChoice == paper) { // et que l'ordinateur choisi "paper"
-            console.log("You win!");
-        }
+    switch(playerChoice){
+        case "rock":
+            return "rock";
+        case "paper":
+            return "paper";
+        case "scissors":
+            return "scissors";
+        default:
+            return "error";
     }
 }
 
-getPlayerChoice(playerInput);
-getComputerChoice();
-findWinner(playerChoice, computerChoice);
+function getComputerChoice(){
+
+    const choices = ["rock", "paper", "scissors"];
+    const randomNumber = Math.floor(Math.random() * choices.length);
+    return choices[randomNumber];
+}
+
+function getWinner(playerChoice, computerChoice){
+
+    if(playerChoice === computerChoice){
+        return "draw";
+    }
+    if(playerChoice === "rock"){
+        if(computerChoice === "paper"){
+            return "Player Won";
+        }
+        if(computerChoice === "scissors"){
+            return "Computer Won";
+        }
+    }
+    if(playerChoice === "paper"){
+
+        if(computerChoice === "rock"){
+            return "Player Won";
+        }
+        if(computerChoice === "scissors"){
+            return "Computer Won";
+        }
+    }
+    if(playerChoice === "scissors"){
+
+        if(computerChoice === "rock"){
+            return "Computer Won";
+        }
+        if(computerChoice === "paper"){
+            return "Player Won";
+        }
+    }
+    if(playerChoice === "bomb"){
+        return "Player Won";
+    }
+}
+
+console.log(playerChoice);
+console.log(computerChoice);
+console.log(getWinner(playerChoice, computerChoice));
